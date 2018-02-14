@@ -1,0 +1,64 @@
+<?xml version="1.0" ?>
+<States>
+    <MENU>
+        <TEXTURES>
+            <texture filename="assets/button.png" ID="playbutton"/>
+            <texture filename="assets/exit.png" ID="exitbutton"/>
+        </TEXTURES>
+        
+        <OBJECTS>
+            <object type="MenuButton" x="100" y="100" width="400" height="100" textureID="playbutton" numFrames="0" callbackID="1"/>
+            <object type="MenuButton" x="100" y="300" width="400" height="100" textureID="exitbutton" numFrames="0" callbackID="2"/>
+        </OBJECTS>
+    </MENU>
+	
+	<NPCSELECTION>
+        <TEXTURES>
+            <texture filename="assets/playNPC.png" ID="playbutton"/>
+            <texture filename="assets/backNPC.png" ID="exitbutton"/>
+			<texture filename="assets/NPCBorderAssualt.png" ID="NPCBorderAssualt"/>
+			<texture filename="assets/NPCBorderHeavy.png" ID="NPCBorderHeavy"/>
+			<texture filename="assets/NPCBorderSniper.png" ID="NPCBorderSniper"/>
+        </TEXTURES>
+        
+        <OBJECTS>
+            <object type="MenuButton" x="502" y="438" width="128" height="32" textureID="playbutton" numFrames="0" callbackID="1"/>
+            <object type="MenuButton" x="10" y="438" width="128" height="32" textureID="exitbutton" numFrames="0" callbackID="2"/>
+			
+			<object type="MenuButton" x="25" y="60" width="180" height="360" textureID="NPCBorderAssualt" numFrames="0" callbackID="3"/>
+			<object type="MenuButton" x="230" y="60" width="180" height="360" textureID="NPCBorderHeavy" numFrames="0" callbackID="4"/>
+			<object type="MenuButton" x="435" y="60" width="180" height="360" textureID="NPCBorderSniper" numFrames="0" callbackID="5"/>
+        </OBJECTS>
+    </NPCSELECTION>
+    
+    <PLAY>
+        
+    </PLAY>
+    
+    <PAUSE>
+        <TEXTURES>
+            <texture filename="assets/resume.png" ID="resumebutton"/>
+            <texture filename="assets/main.png" ID="mainbutton"/>
+        </TEXTURES>
+        
+        <OBJECTS>
+            <object type="MenuButton" x="200" y="100" width="200" height="80" textureID="mainbutton" numFrames="0" callbackID="1"/>
+            <object type="MenuButton" x="200" y="300" width="200" height="80" textureID="resumebutton" numFrames="0" callbackID="2"/>
+        </OBJECTS>
+    </PAUSE>
+
+    
+    <GAMEOVER>
+        <TEXTURES>
+            <texture filename="assets/gameover.png" ID="gameovertext"/>
+            <texture filename="assets/main.png" ID="mainbutton"/>
+            <texture filename="assets/restart.png" ID="restartbutton"/>
+        </TEXTURES>
+        
+        <OBJECTS>
+            <object type="AnimatedGraphic" x="200" y="100" width="190" height="30" textureID="gameovertext" numFrames="2" animSpeed="2"/>
+            <object type="MenuButton" x="200" y="200" width="200" height="80" textureID="mainbutton" numFrames="0" callbackID="1"/>
+            <object type="MenuButton" x="200" y="300" width="200" height="80" textureID="restartbutton" numFrames="0" callbackID="2"/>
+        </OBJECTS>
+    </GAMEOVER>
+</States>
