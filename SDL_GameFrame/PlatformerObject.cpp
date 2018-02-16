@@ -70,6 +70,8 @@ bool PlatformerObject::checkCollideTile(Vector2D newPos)
         {
             TileLayer* pTileLayer = (*it);
             std::vector<std::vector<int>> tiles = pTileLayer->getTileIDs();
+
+			//std::vector<std::vector<int>> tiles = pTileLayer->getTileIDs();
             
             Vector2D layerPos = pTileLayer->getPosition();
             
@@ -87,14 +89,19 @@ bool PlatformerObject::checkCollideTile(Vector2D newPos)
             
             for(int i = startPos.m_x; i < endPos.m_x; i++)
             {
-                for(int j = startPos.m_y; j < endPos.m_y; j++)
-                {
-                    tileColumn = i / pTileLayer->getTileSize();
-                    tileRow = j / pTileLayer->getTileSize();
+				for (int j = startPos.m_y; j < endPos.m_y; j++)
+				{
+					tileColumn = i / pTileLayer->getTileSize();
+					tileRow = j / pTileLayer->getTileSize();
+
+					tileid = tiles[tileRow + y][tileColumn + x];
+
+					int tileid_y = tiles[tileRow + y + pTileLayer->getTileSize()][tileColumn + x];
                     
-                    tileid = tiles[tileRow + y][tileColumn + x];
-                    
-                    if(tileid != 0)
+					// tileID of 1 is collided, 0 is empty space
+					// so if you hit anything return true
+					// else false
+                    if(tileid !=0)
                     {
                         return true;
                     }

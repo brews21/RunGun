@@ -106,8 +106,11 @@ private:
         newPos = m_position;
         newPos.m_y += velocity.m_y;
         
-        if(!checkCollideTile(newPos))
+		// if this return false you have not hit anything
+		// for y this would be you are not on a flat surface
+	    if(!checkCollideTile(newPos))
         {
+			// and you are not falling, on a flast surface
             if(m_velocity.m_y == 0)
             {
                 if(moveLeft)
@@ -123,6 +126,7 @@ private:
             }
             
             m_position.m_y = newPos.m_y;
+			//m_velocity.m_y = 0;
         }
         else
         {

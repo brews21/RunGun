@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="200" height="15" tilewidth="32" tileheight="32" nextobjectid="11">
+<map version="1.0" tiledversion="1.1.2" orientation="orthogonal" renderorder="right-down" width="200" height="15" tilewidth="32" tileheight="32" infinite="0" nextobjectid="12">
  <properties>
   <property name="clouds" value="assets/prehistoric.png"/>
   <property name="player" value="assets/player.png"/>
@@ -24,7 +24,7 @@
    <property name="collidable" value="true"/>
   </properties>
   <data encoding="base64" compression="zlib">
-   eJzt08ENACEMA0Hov+mrwA/ukSgwI7kD71rwjn04eIk+INMHZPqATB+Q6QMyfUB22sefwVQVfWiEqar60AkTVfehESbp6EMjTNHVR1UjerxHx586+zC7bR8KwgHc
+   eJzt09ENgDAMQ8Gy/9JMYInykRB6J3kDv7XgHNfm4CT6gEwfkOkDMn1Apg/I9AHZbh9vBlNV9PG0Eb3xNVV9+DYTVfehESbp6EMjTNHVR1UjevyPjj919mH2t93B9gHm
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
@@ -77,6 +77,14 @@
    </properties>
   </object>
   <object id="8" name="Snail" type="Snail" x="4767" y="408" width="32" height="32">
+   <properties>
+    <property name="numFrames" value="4"/>
+    <property name="textureHeight" value="34"/>
+    <property name="textureID" value="snail"/>
+    <property name="textureWidth" value="34"/>
+   </properties>
+  </object>
+  <object id="11" name="Snail" type="Snail" x="830" y="244" width="32" height="32">
    <properties>
     <property name="numFrames" value="4"/>
     <property name="textureHeight" value="34"/>
