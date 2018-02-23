@@ -7,6 +7,8 @@
 #include "InputManager.h"
 #include "StateParser.h"
 
+#include "LevelScreenState.h"
+
 const std::string MainMenuState::s_menuID = "MENU";
 
 // Callbacks

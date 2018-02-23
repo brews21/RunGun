@@ -91,6 +91,7 @@
     <ClCompile Include="InputManager.cpp" />
     <ClCompile Include="Level.cpp" />
     <ClCompile Include="LevelParser.cpp" />
+    <ClCompile Include="LevelScreenState.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MainMenuState.cpp" />
     <ClCompile Include="MapLoader.cpp" />
@@ -135,6 +136,7 @@
     <ClInclude Include="Level.h" />
     <ClInclude Include="Level1Boss.h" />
     <ClInclude Include="LevelParser.h" />
+    <ClInclude Include="LevelScreenState.h" />
     <ClInclude Include="LoaderParams.h" />
     <ClInclude Include="MainMenuState.h" />
     <ClInclude Include="MapLoader.h" />
