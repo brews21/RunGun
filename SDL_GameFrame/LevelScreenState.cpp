@@ -8,16 +8,18 @@
 #include "InputManager.h"
 #include "StateParser.h"
 
+#include "MainMenuState.h"
+
 const std::string LevelScreenState::s_menuID = "LEVELSCREEN";
 
 void LevelScreenState::s_menuToLevelOne()
 {
-
+	Game::Singleton()->getStateMachine()->changeState(new PlayState);
 }
 
 void LevelScreenState::s_menuToLevelTwo()
 {
-
+	Game::Singleton()->getStateMachine()->changeState(new MainMenuState);
 }
 
 void LevelScreenState::update()
@@ -64,7 +66,7 @@ bool LevelScreenState::onEnter()
 	setCallbacks(m_callbacks);
 
 	m_loadingComplete = true;
-	std::cout << "entering MenuState\n";
+	std::cout << "entering LevelScreenState\n";
 	return true;
 }
 
