@@ -7,12 +7,14 @@
 #include "InputManager.h"
 #include "StateParser.h"
 
+#include "LevelScreenState.h"
+
 const std::string MainMenuState::s_menuID = "MENU";
 
 // Callbacks
 void MainMenuState::s_menuToPlay()
 {
-	Game::Singleton()->getStateMachine()->changeState(new PlayState());
+	Game::Singleton()->getStateMachine()->changeState(new LevelScreenState());
 }
 
 void MainMenuState::s_exitFromMenu()
