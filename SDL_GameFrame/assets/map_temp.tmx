@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" tiledversion="1.1.2" orientation="orthogonal" renderorder="right-down" width="200" height="15" tilewidth="32" tileheight="32" infinite="0" nextobjectid="12">
+ <properties>
+  <property name="clouds" value="assets/prehistoric.png"/>
+  <property name="player" value="assets/player.png"/>
+  <property name="snail" value="assets/snail.png"/>
+ </properties>
+ <tileset firstgid="1" name="blocks1" tilewidth="32" tileheight="32" spacing="2" margin="2" tilecount="198" columns="18">
+  <image source="blocks1.png" width="614" height="376"/>
+ </tileset>
+ <objectgroup name="Object Layer 2">
+  <object id="1" name="Background" type="ScrollingBackground" x="0" y="0" width="32" height="32">
+   <properties>
+    <property name="animSpeed" value="0.2"/>
+    <property name="numFrames" value="1"/>
+    <property name="textureHeight" value="480"/>
+    <property name="textureID" value="clouds"/>
+    <property name="textureWidth" value="640"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer name="Collision" width="200" height="15">
+  <properties>
+   <property name="collidable" value="true"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJzt2NEOgCAIhWF9/5futjF1kQRI/7exWprrwjOq1oD/6MqyWGt1D5DJTj66OMrrs7E+OR/NByJZ9o/7mnJ9OTY60kOQTUT/eLIGkMFu/9B8k4zmkw9k9sX7FVAF+QDmtPl4U5pnsZgDWPHIh+a/Fz0MmXjlg72NE3nng4zgJBH5ICM4RVQ+vDJCHuuI2E+R+aCoanUB+g8CFw==
+  </data>
+ </layer>
+ <objectgroup name="Object Layer 1">
+  <object id="2" name="Player" type="Player" x="286" y="186" width="40" height="60">
+   <properties>
+    <property name="numFrames" value="3"/>
+    <property name="textureHeight" value="60"/>
+    <property name="textureID" value="player"/>
+    <property name="textureWidth" value="40"/>
+   </properties>
+  </object>
+  <object id="3" name="Snail" type="Snail" x="1011" y="408" width="32" height="32">
+   <properties>
+    <property name="numFrames" value="4"/>
+    <property name="textureHeight" value="34"/>
+    <property name="textureID" value="snail"/>
+    <property name="textureWidth" value="34"/>
+   </properties>
+  </object>
+  <object id="4" name="Snail" type="Snail" x="1748" y="407" width="32" height="32">
+   <properties>
+    <property name="numFrames" value="4"/>
+    <property name="textureHeight" value="34"/>
+    <property name="textureID" value="snail"/>
+    <property name="textureWidth" value="34"/>
+   </properties>
+  </object>
+  <object id="5" name="Snail" type="Snail" x="2193" y="406" width="32" height="32">
+   <properties>
+    <property name="numFrames" value="4"/>
+    <property name="textureHeight" value="34"/>
+    <property name="textureID" value="snail"/>
+    <property name="textureWidth" value="34"/>
+   </properties>
+  </object>
+  <object id="6" name="Snail" type="Snail" x="3102" y="407" width="32" height="32">
+   <properties>
+    <property name="numFrames" value="4"/>
+    <property name="textureHeight" value="34"/>
+    <property name="textureID" value="snail"/>
+    <property name="textureWidth" value="34"/>
+   </properties>
+  </object>
+  <object id="7" name="Snail" type="Snail" x="4117" y="410" width="32" height="32">
+   <properties>
+    <property name="numFrames" value="4"/>
+    <property name="textureHeight" value="34"/>
+    <property name="textureID" value="snail"/>
+    <property name="textureWidth" value="34"/>
+   </properties>
+  </object>
+  <object id="8" name="Snail" type="Snail" x="4767" y="408" width="32" height="32">
+   <properties>
+    <property name="numFrames" value="4"/>
+    <property name="textureHeight" value="34"/>
+    <property name="textureID" value="snail"/>
+    <property name="textureWidth" value="34"/>
+   </properties>
+  </object>
+  <object id="11" name="Snail" type="Snail" x="830" y="244" width="32" height="32">
+   <properties>
+    <property name="numFrames" value="4"/>
+    <property name="textureHeight" value="34"/>
+    <property name="textureID" value="snail"/>
+    <property name="textureWidth" value="34"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

@@ -1,5 +1,3 @@
-// either find a use of remove this class
-
 #ifndef __Callback__
 #define __Callback__
 
