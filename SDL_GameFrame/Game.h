@@ -58,7 +58,7 @@ public:
     int getGameHeight() const { return m_gameHeight; }
 	float getScrollSpeed() { return m_scrollSpeed; }
 
-    std::vector<std::string> getLevelFiles() { return m_pLevelManager->getLevelFiles; }
+    std::vector<std::string> getLevelFiles() { return m_pLevelManager->getLevelFiles(); }
     
 	void framesPerSec();
 
