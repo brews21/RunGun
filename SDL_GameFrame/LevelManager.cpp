@@ -28,6 +28,10 @@ void LevelManager::addLevels()
 	// start at this level
 	m_currentLevel = 0;
 	m_nextLevel = 0;
+
+	mLevelFiles["level1"] = "assets/map1.tmx";
+	mLevelFiles["level2"] = "assets/map_temp.tmx";
+
 }
 
 void LevelManager::pushLevel(std::string level)

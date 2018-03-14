@@ -3,6 +3,9 @@
 
 #include <string>
 #include <vector>
+#include <map>
+
+using namespace std;
 
 class LevelManager
 {
@@ -20,10 +23,13 @@ public:
 
 	bool init();
 
-	void pushLevel(std::string level);
+	void pushLevel(string level);
 
 	void setCurrentLevel(int currentLevel) { m_currentLevel = currentLevel;  }
 	const int getCurrentLevel() { return m_currentLevel; }
+
+	void setCurrentLevel(string currentLevel) { mcurrentLevel = currentLevel; }
+	const string getCurrentLevel_string() { return mLevelFiles[mcurrentLevel]; }
 
 	void setNextLevel(int nextLevel) { m_nextLevel = nextLevel; }
 	const int getNextLevel() { return m_nextLevel; }
@@ -31,7 +37,7 @@ public:
 	void setLevelComplete(bool levelComplete) { m_bLevelComplete = levelComplete; }
 	const bool getLevelComplete() { return m_bLevelComplete; }
 
-	std::vector<std::string> getLevelFiles() { return m_levelFiles; }
+	vector<string> getLevelFiles() { return m_levelFiles; }
 
 private:
 	static LevelManager* s_pSingleton;
@@ -47,7 +53,10 @@ private:
 	int m_nextLevel;
 	bool m_bLevelComplete;
 
-	std::vector<std::string> m_levelFiles;
+	vector<string> m_levelFiles;
+
+	map<string, string> mLevelFiles;
+	string mcurrentLevel;
 };
 
 #endif // __LevelManager__

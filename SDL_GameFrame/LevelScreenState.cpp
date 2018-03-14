@@ -15,13 +15,13 @@ const std::string LevelScreenState::s_menuID = "LEVELSCREEN";
 
 void LevelScreenState::s_menuToLevelOne()
 {
-	LevelManager::Singleton()->setCurrentLevel(0);
+	LevelManager::Singleton()->setCurrentLevel("level1");
 	Game::Singleton()->getStateMachine()->changeState(new PlayState);
 }
 
 void LevelScreenState::s_menuToLevelTwo()
 {
-	LevelManager::Singleton()->setCurrentLevel(1);
+	LevelManager::Singleton()->setCurrentLevel("level2");
 	Game::Singleton()->getStateMachine()->changeState(new PlayState);
 }
 
