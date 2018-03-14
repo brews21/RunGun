@@ -83,7 +83,7 @@ bool Game::init()
 	TTF_Init();
 
 	Timer::Singleton()->init();
-	//LevelManager::Singleton()->init();
+	LevelManager::Singleton()->init();
     
     // add some sound effects - TODO move to better place
     SoundManager::Singleton()->load("assets/DST-Away.ogg", "music1", SOUND_MUSIC);
@@ -107,7 +107,7 @@ bool Game::init()
     m_pGameStateManager = new GameStateManager();
 	m_pGameStateManager->changeState(new StartScreenState());
 
-	m_pLevelManager = new LevelManager();
+	//m_pLevelManager = new LevelManager();
   
 	m_FPS = new TextManager("assets/DejaVuSans.ttf", 16, 0, 255, 0);
 
@@ -115,12 +115,12 @@ bool Game::init()
     return true;
 }
 
-void Game::setCurrentLevel(int currentLevel)
-{
-	m_pLevelManager->setCurrentLevel(currentLevel);
-    //m_pGameStateManager->changeState(new GameOverState());
-    m_bLevelComplete = false;
-}
+//void Game::setCurrentLevel(int currentLevel)
+//{
+//	m_pLevelManager->setCurrentLevel(currentLevel);
+//    //m_pGameStateManager->changeState(new GameOverState());
+//    m_bLevelComplete = false;
+//}
 
 void Game::render()
 {

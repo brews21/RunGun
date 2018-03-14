@@ -8,7 +8,7 @@ class LevelManager
 {
 public:
 
-	/*static LevelManager* Singleton()
+	static LevelManager* Singleton()
 	{
 		if (s_pSingleton == 0)
 		{
@@ -16,12 +16,9 @@ public:
 		}
 
 		return s_pSingleton;
-	}*/
+	}
 
-
-	LevelManager();
-	~LevelManager();
-
+	bool init();
 
 	void pushLevel(std::string level);
 
@@ -37,7 +34,12 @@ public:
 	std::vector<std::string> getLevelFiles() { return m_levelFiles; }
 
 private:
-	//static LevelManager* s_pSingleton;
+	static LevelManager* s_pSingleton;
+
+	LevelManager();
+	~LevelManager();
+
+	LevelManager(const LevelManager&);
 
 	void addLevels();
 	

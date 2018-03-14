@@ -1,16 +1,23 @@
 #include "LevelManager.h"
 
+LevelManager* LevelManager::s_pSingleton = 0;
+
 LevelManager::LevelManager()
 {
-	addLevels();
 
 }
-
 
 LevelManager::~LevelManager()
 {
+
 }
 
+bool LevelManager::init()
+{
+	addLevels();
+
+	return true;
+}
 
 void LevelManager::addLevels()
 {

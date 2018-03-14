@@ -9,18 +9,19 @@
 #include "StateParser.h"
 
 #include "MainMenuState.h"
+#include "LevelManager.h"
 
 const std::string LevelScreenState::s_menuID = "LEVELSCREEN";
 
 void LevelScreenState::s_menuToLevelOne()
 {
-	Game::Singleton()->setCurrentLevel(0);
+	LevelManager::Singleton()->setCurrentLevel(0);
 	Game::Singleton()->getStateMachine()->changeState(new PlayState);
 }
 
 void LevelScreenState::s_menuToLevelTwo()
 {
-	Game::Singleton()->setCurrentLevel(1);
+	LevelManager::Singleton()->setCurrentLevel(1);
 	Game::Singleton()->getStateMachine()->changeState(new PlayState);
 }
 

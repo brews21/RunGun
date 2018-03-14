@@ -36,13 +36,13 @@ public:
     SDL_Window* getWindow() const { return m_pWindow; }
     
 	GameStateManager* getStateMachine() { return m_pGameStateManager; }
-	LevelManager* getLevelManager() { return m_pLevelManager;  }
+	//LevelManager* getLevelManager() { return m_pLevelManager;  }
     
     void setPlayerLives(int lives) { m_playerLives = lives; }
     int getPlayerLives() { return m_playerLives; }
     
-    void setCurrentLevel(int currentLevel);
-    const int getCurrentLevel() { return m_pLevelManager->getCurrentLevel(); }
+    //void setCurrentLevel(int currentLevel);
+    //const int getCurrentLevel() { return m_pLevelManager->getCurrentLevel(); }
     
     //void setNextLevel(int nextLevel) { m_nextLevel = nextLevel; }
     //const int getNextLevel() { return m_nextLevel; }
@@ -58,7 +58,7 @@ public:
     int getGameHeight() const { return m_gameHeight; }
 	float getScrollSpeed() { return m_scrollSpeed; }
 
-    std::vector<std::string> getLevelFiles() { return m_pLevelManager->getLevelFiles(); }
+    //std::vector<std::string> getLevelFiles() { return m_pLevelManager->getLevelFiles(); }
     
 	void framesPerSec();
 
@@ -68,7 +68,7 @@ private:
     SDL_Renderer* m_pRenderer;
     
     GameStateManager* m_pGameStateManager;
-	LevelManager* m_pLevelManager;
+	//LevelManager* m_pLevelManager;
     
     bool m_bRunning;
     
