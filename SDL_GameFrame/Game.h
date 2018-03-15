@@ -41,15 +41,6 @@ public:
     void setPlayerLives(int lives) { m_playerLives = lives; }
     int getPlayerLives() { return m_playerLives; }
     
-    //void setCurrentLevel(int currentLevel);
-    //const int getCurrentLevel() { return m_pLevelManager->getCurrentLevel(); }
-    
-    //void setNextLevel(int nextLevel) { m_nextLevel = nextLevel; }
-    //const int getNextLevel() { return m_nextLevel; }
-    
-    //void setLevelComplete(bool levelComplete) { m_bLevelComplete = levelComplete; }
-    //const bool getLevelComplete() { return m_bLevelComplete; }
-    
     bool running() { return m_bRunning; }
     
     void quit() { m_bRunning = false; }
@@ -58,8 +49,6 @@ public:
     int getGameHeight() const { return m_gameHeight; }
 	float getScrollSpeed() { return m_scrollSpeed; }
 
-    //std::vector<std::string> getLevelFiles() { return m_pLevelManager->getLevelFiles(); }
-    
 	void framesPerSec();
 
 private:
@@ -68,8 +57,7 @@ private:
     SDL_Renderer* m_pRenderer;
     
     GameStateManager* m_pGameStateManager;
-	//LevelManager* m_pLevelManager;
-    
+	
     bool m_bRunning;
     
     static Game* s_pSingleton;

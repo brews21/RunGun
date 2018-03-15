@@ -115,13 +115,6 @@ bool Game::init()
     return true;
 }
 
-//void Game::setCurrentLevel(int currentLevel)
-//{
-//	m_pLevelManager->setCurrentLevel(currentLevel);
-//    //m_pGameStateManager->changeState(new GameOverState());
-//    m_bLevelComplete = false;
-//}
-
 void Game::render()
 {
 	SDL_RenderClear(m_pRenderer);
