@@ -17,6 +17,7 @@
 #include "Snail.h"
 #include <iostream>
 
+
 using namespace std;
 
 Game* Game::s_pSingleton = 0;
@@ -82,6 +83,7 @@ bool Game::init()
 	TTF_Init();
 
 	Timer::Singleton()->init();
+	LevelManager::Singleton()->init();
     
     // add some sound effects - TODO move to better place
     SoundManager::Singleton()->load("assets/DST-Away.ogg", "music1", SOUND_MUSIC);
@@ -104,18 +106,13 @@ bool Game::init()
     // start the menu state
     m_pGameStateManager = new GameStateManager();
 	m_pGameStateManager->changeState(new StartScreenState());
+
+	//m_pLevelManager = new LevelManager();
   
 	m_FPS = new TextManager("assets/DejaVuSans.ttf", 16, 0, 255, 0);
 
     m_bRunning = true; // everything inited successfully, start the main loop
     return true;
-}
-
-void Game::setCurrentLevel(int currentLevel)
-{
-    m_currentLevel = currentLevel;
-    m_pGameStateManager->changeState(new GameOverState());
-    m_bLevelComplete = false;
 }
 
 void Game::render()

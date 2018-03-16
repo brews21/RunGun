@@ -67,7 +67,8 @@ bool PlayState::onEnter()
     Game::Singleton()->setPlayerLives(3);
     
     LevelParser levelParser;
-	m_pLevel = levelParser.parseLevel(Game::Singleton()->getLevelFiles()[Game::Singleton()->getCurrentLevel()].c_str());
+	//m_pLevel = levelParser.parseLevel(LevelManager::Singleton()->getLevelFiles()[LevelManager::Singleton()->getCurrentLevel()].c_str());
+	m_pLevel = levelParser.parseLevel(LevelManager::Singleton()->getCurrentLevel_string().c_str());
     
 	TextureManager::Singleton()->load("assets/bullet1.png", "bullet1", Game::Singleton()->getRenderer());
 	TextureManager::Singleton()->load("assets/bullet2.png", "bullet2", Game::Singleton()->getRenderer());

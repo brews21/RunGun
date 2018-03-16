@@ -5,6 +5,7 @@
 #include "GameStateManager.h"
 #include "TextManager.h"
 #include <vector>
+#include "LevelManager.h"
 
 // game.h from master
 // from MikeyBLaptop
@@ -33,19 +34,12 @@ public:
     
     SDL_Renderer* getRenderer() const { return m_pRenderer; }
     SDL_Window* getWindow() const { return m_pWindow; }
-    GameStateManager* getStateMachine() { return m_pGameStateManager; }
+    
+	GameStateManager* getStateMachine() { return m_pGameStateManager; }
+	//LevelManager* getLevelManager() { return m_pLevelManager;  }
     
     void setPlayerLives(int lives) { m_playerLives = lives; }
     int getPlayerLives() { return m_playerLives; }
-    
-    void setCurrentLevel(int currentLevel);
-    const int getCurrentLevel() { return m_currentLevel; }
-    
-    void setNextLevel(int nextLevel) { m_nextLevel = nextLevel; }
-    const int getNextLevel() { return m_nextLevel; }
-    
-    void setLevelComplete(bool levelComplete) { m_bLevelComplete = levelComplete; }
-    const bool getLevelComplete() { return m_bLevelComplete; }
     
     bool running() { return m_bRunning; }
     
@@ -55,8 +49,6 @@ public:
     int getGameHeight() const { return m_gameHeight; }
 	float getScrollSpeed() { return m_scrollSpeed; }
 
-    std::vector<std::string> getLevelFiles() { return m_levelFiles; }
-    
 	void framesPerSec();
 
 private:
@@ -65,7 +57,7 @@ private:
     SDL_Renderer* m_pRenderer;
     
     GameStateManager* m_pGameStateManager;
-    
+	
     bool m_bRunning;
     
     static Game* s_pSingleton;
