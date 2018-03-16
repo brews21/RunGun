@@ -17,7 +17,6 @@
 #include "Snail.h"
 #include <iostream>
 
-
 using namespace std;
 
 Game* Game::s_pSingleton = 0;
@@ -31,16 +30,9 @@ m_pRenderer(0),
 m_bRunning(false),
 m_pGameStateManager(0),
 m_playerLives(3),
-m_scrollSpeed(0.8),
-m_bLevelComplete(false)
+m_scrollSpeed(0.8)
 {
-    // add some level files to an array
-    m_levelFiles.push_back("assets/map1.tmx");
-	m_levelFiles.push_back("assets/map_temp.tmx");
-    
-    // start at this level
-    m_currentLevel = 0;
-	m_nextLevel = 0;
+
 }
 
 Game::~Game()
@@ -93,7 +85,6 @@ bool Game::init()
     
     //SoundManager::Singleton()->playMusic("music1", -1);
     
-    
     InputManager::Singleton()->initialiseJoysticks();
     
     // register the types for the game
@@ -106,8 +97,6 @@ bool Game::init()
     // start the menu state
     m_pGameStateManager = new GameStateManager();
 	m_pGameStateManager->changeState(new StartScreenState());
-
-	//m_pLevelManager = new LevelManager();
   
 	m_FPS = new TextManager("assets/DejaVuSans.ttf", 16, 0, 255, 0);
 
@@ -178,5 +167,3 @@ void Game::clean()
     SDL_DestroyRenderer(m_pRenderer);
     SDL_Quit();
 }
-
-
