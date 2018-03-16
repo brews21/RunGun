@@ -36,7 +36,6 @@ public:
     SDL_Window* getWindow() const { return m_pWindow; }
     
 	GameStateManager* getStateMachine() { return m_pGameStateManager; }
-	//LevelManager* getLevelManager() { return m_pLevelManager;  }
     
     void setPlayerLives(int lives) { m_playerLives = lives; }
     int getPlayerLives() { return m_playerLives; }
@@ -67,12 +66,6 @@ private:
     int m_playerLives;
 
 	float m_scrollSpeed;
-
-    int m_currentLevel;
-    int m_nextLevel;
-    bool m_bLevelComplete;
-    
-    std::vector<std::string> m_levelFiles;
 
 	// Timer
 	Uint32 m_frameStart, m_frameTime;
