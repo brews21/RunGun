@@ -95,8 +95,6 @@ bool PlatformerObject::checkCollideTile(Vector2D newPos)
 					tileRow = j / pTileLayer->getTileSize();
 
 					tileid = tiles[tileRow + y][tileColumn + x];
-
-					int tileid_y = tiles[tileRow + y + pTileLayer->getTileSize()][tileColumn + x];
                     
 					// tileID of 1 is collided, 0 is empty space
 					// so if you hit anything return true
